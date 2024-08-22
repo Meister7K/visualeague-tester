@@ -142,7 +142,7 @@ export const customDatatableStyles = {
     headCells: {
 
         style: {
-			background: project_colors.surface[2],
+			background: project_colors.surface[1],
 			fontSize: ".6rem",
 			minWidth: "60px!important",
 			color: project_colors.textTheme.highEmphasis,
@@ -153,7 +153,7 @@ export const customDatatableStyles = {
 			fontSize: ".7rem",
 			minWidth: "60px!important",
 			color: project_colors.textTheme.highEmphasis,
-			background: project_colors.surface[1]
+			background: project_colors.surface[0]
         },
     },
 }

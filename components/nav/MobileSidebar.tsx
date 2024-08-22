@@ -121,6 +121,21 @@ export default function MobileSidebar() {
 									</Button>
 								</Link>
 							)}
+							{context?.settings && (
+								<Link href={`/league/${context.settings.league_id}/history`}>
+									<Button
+										variant={'unstyled'}
+										_hover={{textColor: 'grey'}}
+										onClick={onClose}
+									>
+										<HStack>
+										<VscListTree/>
+										<Text>History</Text>
+										</HStack>
+										
+									</Button>
+								</Link>
+							)}
 						</VStack>
 						<Box mt={'5'} ml={-1}>
 							<ExpandableLeagueSearch />

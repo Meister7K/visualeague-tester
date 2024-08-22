@@ -23,7 +23,7 @@ const AreaBumpChart = (props: MyProps) => {
         theme={theme}
         margin={{ top: 40, right: 100, bottom: 40, left: 100 }}
         spacing={6}
-        colors={{ scheme: 'nivo' }}
+        colors={{ scheme: 'dark2' }}
         blendMode="multiply"
         startLabel={"id" as any}
         endLabel={"id" as any}

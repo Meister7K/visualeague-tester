@@ -13,8 +13,25 @@ const LeagueWeeklyPointsLineChart = (props: MyProps) => {
 	if (props.league?.settings == undefined) return <Spinner />
 	let data = formatScoresForLineChart(props.league, isOnMobile) as any
 	const theme = {
-		background: isOnMobile ? undefined : project_colors.surface[1],
+		background: isOnMobile ? undefined : project_colors.surface[0],
 		textColor: 'white',
+		axis: {
+			ticks: {
+				text: {
+					fill: 'white', // Change this to your desired tick mark text color
+				},
+			},
+			legend: {
+				text: {
+					fill: 'white', // Change this to your desired legend/title color
+				},
+			},
+		},
+		legends: {
+			text: {
+				fill: 'white', // Change this to your desired legend/title color
+			},
+		},
 	}
 
   const desktopMargin = {top: 20, right: 170, bottom: 50, left: 60}
@@ -51,6 +68,7 @@ const LeagueWeeklyPointsLineChart = (props: MyProps) => {
 		<ResponsiveLine
 			data={data}
 			theme={theme}
+			colors={{ scheme: 'dark2' }}
 			margin={isOnMobile ? mobileMargin : desktopMargin}
 			curve={isOnMobile ? 'step' : 'linear'}
 			enableGridX={false}

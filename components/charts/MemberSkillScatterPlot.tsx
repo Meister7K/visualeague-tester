@@ -90,8 +90,32 @@ export default function MemberSkillScatterPlot (props: MyProps) {
 		})
 	}
 	const theme = {
-		background: isLargerThan800 ? project_colors.surface[1] : "",
+		background: isLargerThan800 ? project_colors.surface[0] : "",
 		textColor: 'white',
+		grid: {
+			line: {
+				stroke: 'white',
+				strokeWidth: 1,
+				opacity: 0.2,
+			},
+		},
+		axis: {
+			ticks: {
+				text: {
+					fill: 'white', // Change this to your desired tick mark text color
+				},
+			},
+			legend: {
+				text: {
+					fill: 'white', // Legend/title color
+				},
+			},
+		},
+		legends: {
+			text: {
+				fill: 'white', // Legend/title color
+			},
+		},
 	}
 
 	if (data.length <= 0) return <Spinner />

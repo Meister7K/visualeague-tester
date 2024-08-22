@@ -56,9 +56,26 @@ const PowerRankingBumpChart = (props: MyProps) => {
 		textColor: 'white',
 		grid: {
 			line: {
-				stroke: 'grey',
+				stroke: 'white',
 				strokeWidth: 1,
 				opacity: 0.2,
+			},
+		},
+		axis: {
+			ticks: {
+				text: {
+					fill: 'white', // Change this to your desired tick mark text color
+				},
+			},
+			legend: {
+				text: {
+					fill: 'white', // Legend/title color
+				},
+			},
+		},
+		legends: {
+			text: {
+				fill: 'white', // Legend/title color
 			},
 		},
 	}
@@ -75,7 +92,7 @@ const PowerRankingBumpChart = (props: MyProps) => {
 			margin={margins}
 			spacing={10}
 			borderWidth={0}
-			colors={{scheme: 'paired'}}
+			colors={{scheme: 'dark2'}}
 			defs={[
 				linearGradientDef('gradientA', [
 					{offset: 0, color: 'inherit', opacity: 0.1},

@@ -40,7 +40,7 @@ const BarChart = (props: MyProps) => {
     groupMode="grouped"
     valueScale={{ type: 'linear' }}
     indexScale={{ type: 'band', round: true }}
-    colors={{ scheme: 'nivo' }}
+    colors={{ scheme: 'category10' }}
     borderWidth={1}
     borderColor={{
         from: 'color',

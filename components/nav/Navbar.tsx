@@ -93,6 +93,11 @@ const Navbar = (props: MyProps) => {
 					disabled={context.settings == undefined}
 					link={`/league/${context?.settings?.league_id}/rosters`}
 				/>
+				<NavbarButton
+					buttonText='History'
+					disabled={context.settings == undefined}
+					link={`/league/${context?.settings?.league_id}/history`}
+				/>
 				<Box pl={3}>
 					<ExpandableLeagueSearch />
 				</Box>
@@ -117,6 +122,7 @@ function NavbarButton(props: NavButtonProps) {;
 	if (props.link != undefined && props.disabled != true) {
 		return (
 			<Link href={props.link} 
+			
 			>
 				<Button
 					transition={'all .2s ease'}
@@ -129,6 +135,7 @@ function NavbarButton(props: NavButtonProps) {;
 					size={'md'}
 					fontWeight={'semibold'}
 					borderRadius={0}
+			
 					colorScheme={'primary'}
 					textColor='white'
 					isActive={pathName == "/" + props.link && isLargerThan800}
@@ -157,6 +164,7 @@ function NavbarButton(props: NavButtonProps) {;
 				fontWeight={'medium'}
 				colorScheme={'primary'}
 				textColor='white'
+				
 				isActive={pathName?.includes("/" + props.link) && isLargerThan800}
 				_active={
 					{ bg: project_colors.secondary[500]}

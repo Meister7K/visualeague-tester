@@ -33,6 +33,7 @@ const TeamSidebar = () => {
                   cursor: "pointer",
                 }}
                   size={"md"}
+                  
                   borderRadius={0}
                   fontWeight={"semibold"}
                   colorScheme={"secondary_inverted"}
@@ -50,8 +51,8 @@ const TeamSidebar = () => {
             Teams
             <br />
           </DrawerHeader>
-          <DrawerBody p={0}>
-          { context != undefined && context.settings && (<MemberList onclick={onClose} members={context.members} leagueId={context.settings.league_id}/>)}
+          <DrawerBody p={0} >
+          { context != undefined && context.settings && (<MemberList onclick={onClose} members={context.members}  leagueId={context.settings.league_id}/>)}
             
           </DrawerBody>
 

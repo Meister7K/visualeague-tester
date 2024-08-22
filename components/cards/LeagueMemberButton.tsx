@@ -1,4 +1,4 @@
-import {Avatar, Button, Box, useModalContext, useDisclosure} from '@chakra-ui/react'
+import { Avatar, Button, Box, useModalContext, useDisclosure } from '@chakra-ui/react'
 import Link from 'next/link'
 import LeagueMember from '../../classes/custom/LeagueMember'
 
@@ -13,10 +13,11 @@ const LeagueMemberButton = (props: MyProps) => {
 		<Box onClick={props.onclose}>
 			<Link href={`/league/${props.leagueId}/team/${props.member.roster.roster_id}`}>
 				<Button
-
+					width='100%'
 					size={'sm'}
 					p={3}
 					colorScheme='secondary'
+					borderRadius={2}
 					leftIcon={
 						<Avatar
 							src={`https://sleepercdn.com/avatars/thumbs/${props.member.avatar}`}

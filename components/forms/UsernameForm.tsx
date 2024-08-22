@@ -49,6 +49,10 @@ const UsernameForm = () => {
 		setText(username)
 	}
 
+	const currentYear = new Date().getFullYear();
+    const yearsArray = Array.from({ length: currentYear - 2018 + 1 }, (_, i) => 2018 + i);
+    const yearOptions = yearsArray.reverse();
+
 	return (
 		<Container data-testid='username_form'>
 			<form onSubmit={onFormSubmit}>
@@ -65,11 +69,11 @@ const UsernameForm = () => {
 					onChange={(e) => textChanged(e.target.value)}
 				/>
 				<Select size={['sm','lg']} maxW={["80px", "100px"]} onChange={onSeasonChange}>
-				<option value='2023'>2023</option>
-				<option value='2022'>2022</option>
-				<option value='2021'>2021</option>
-				<option value='2020'>2020</option>
-				<option value='2019'>2019</option>
+				{yearOptions.map((year) => (
+                                <option key={year} value={year}>
+                                    {year}
+                                </option>
+                            ))}
 				</Select>
 				</HStack>
 

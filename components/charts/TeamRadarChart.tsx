@@ -58,7 +58,31 @@ const TeamRadarChart = (props: MyProps) => {
 
     const theme = {
         "background": "none",
-        "textColor": "white"
+        "textColor": "white",
+        grid: {
+            line: {
+                stroke: 'white',
+                strokeWidth: 1,
+                opacity: 0.2,
+            },
+        },
+        axis: {
+            ticks: {
+                text: {
+                    fill: 'white', // Change this to your desired tick mark text color
+                },
+            },
+            legend: {
+                text: {
+                    fill: 'white', // Legend/title color
+                },
+            },
+        },
+        legends: {
+            text: {
+                fill: 'white', // Legend/title color
+            },
+        },
     }
 
 
@@ -77,7 +101,7 @@ const TeamRadarChart = (props: MyProps) => {
         dotSize={10}
         dotColor={{ theme: 'background' }}
         dotBorderWidth={2}
-        colors={{ scheme: 'nivo' }}
+        colors={{ scheme: 'dark2' }}
         blendMode="multiply"
         motionConfig="wobbly"
         

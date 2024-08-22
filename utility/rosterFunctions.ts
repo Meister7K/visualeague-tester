@@ -381,16 +381,16 @@ export function calcPlayerPoints(stats: ScoringSettings | undefined,  leagueSett
 export function getPositionColor(position: POSITION) {
 	switch (position) {
 		case POSITION.QB: {
-			return 'rgba(239, 116, 161, 0.8)'
+			return 'rgba(255, 8, 50, 0.8)'
 		}
 		case POSITION.RB: {
-			return 'rgba(143, 242, 202, 0.8)'
+			return 'rgba(62, 255, 98, 0.8)'
 		}
 		case POSITION.WR: {
-			return 'rgba(86, 201, 248, 0.8)'
+			return 'rgba(12, 171, 233, 0.8)'
 		}
 		case POSITION.TE: {
-			return 'rgba(254, 174, 88, 0.8)'
+			return 'rgba(247, 157, 0, 0.8)'
 		}
 		case POSITION.DL: {
 			return 'rgba(250, 153, 97, 0.8)'
