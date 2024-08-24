@@ -10,6 +10,7 @@ export default class LeagueData {
   public matchups: SleeperMatchup[][];
   public rosters: SleeperRoster[];
   public player_details: DatabasePlayer[];
+	name: string;
 
   constructor(
     users: SleeperUser[],

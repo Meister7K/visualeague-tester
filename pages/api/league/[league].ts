@@ -39,6 +39,7 @@ type Data = {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+	try {
 	const {league} = req.query
 	await runMiddleware(req, res, cors)
 
@@ -58,9 +59,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 			})
 	} else {
 		res.status(401).json({
+			
 			league: new LeagueData([], {} as LeagueSettings, [], [], []),
 		})
-	}
+	} } catch (error) {
+		console.error("Error in handler:", error);
+		res.status(500).json({ error: "Internal Server Error" });
+	  }
+	
 }
 
 export function getLeague(leagueId: string) {

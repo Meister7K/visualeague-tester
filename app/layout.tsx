@@ -6,7 +6,7 @@ const RootLayout = ({children}: {children: React.ReactNode}) => {
 			<head>
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 				<title>VisuaLeague</title>
-				<meta name='Visualize your league' content='Created by Seth Marcus' />
+				<meta name='test' content='test' />
 				<meta name='theme-color' content='#121212' />
 				<meta
 					name='description'

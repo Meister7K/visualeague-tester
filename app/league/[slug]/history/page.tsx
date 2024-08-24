@@ -1,10 +1,11 @@
-"use client"
-import React from "react";
+// app/history/page.tsx
+import HistoryDisplay from './HistoryDisplay';
 
-const HistoryPage = () => {
-    // You can add any UI inside HistoryPage, including a Skeleton.
-    return <div>HistoryPage</div>
-  }
-  
-
-  export default HistoryPage
+export default function HistoryPage() {
+  return (
+    <main>
+      <h1>League History</h1>
+      <HistoryDisplay />
+    </main>
+  );
+}
